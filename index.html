@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Rush Creations</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<header>
+			<a href="#logo" class="logo"> 
+				<img src="rushlogo.png" id = "log">
+
+			</a>
+
+			<ul>
+				<li><a href="#logo" class="active">Home</a></li>
+				<li><a href="#sec">About</a></li>
+			</ul>
+	</header>
+
+	<section>
+		<img src="parallax.png" id="parallax">
+		<img src="moon.png" id = "moon">
+		<img src="rocket.png" id = "rock" >
+		<h2 id="text">Hello I'm Rushit Shah!</h2>
+
+	</section>
+
+
+	<div class = "sec" id="sec">
+		<h2>About Me</h2>
+
+		<div class = "secs" id = "secs">
+
+			<img src="RushPort.jpg" id = "rush">
+
+			<p>"Hello there! My name is Rushit Shah and I am a First Year Student<br> at Mcmaster University. Currently I am working towards obtaining a<br> Bachelors of Applied Sciences (BASc) in Computer Science.<br> <br>In my free time I love to code projects, play the tablas, sing Bollywood<br> songs, and persue photography. In addition to these hobbies, I also<br> LOVE to eat. I will not back down to try any new food fad there is!<br> <br>Well that is all I've to say about me! Feel free to click on any of the<br> icons beside as they will lead you to my resume, my github, my<br> LinkedIn or my photography page.</p>
+
+
+
+			<div class = "leads" id = "leads">
+				<img src="resume.svg" id = "res" width="80px" height="80px">
+
+				<a href="https://www.linkedin.com/in/rushit-shah-03b37319a/">
+					<img src="linked.svg" id = "linked" width="80px" height="80px">
+				</a>
+
+				<a href="https://www.instagram.com/rush.photography9/">
+					<img src="photography.svg" id = "photography" width="80px" height="80px">
+				</a>
+
+				<a href="https://github.com/Rush-Shaw">
+					<img src="git.svg" id = "git" width="80px" height="80px">
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+		let moon = document.getElementById('moon');
+		let text = document.getElementById('text');
+		let rocket = document.getElementById('rock');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			moon.style.top = value * 0.5 + 'px';
+			moon.style.left = value * -0.42 + 'px';
+
+			
+			rocket.style.top = value * -0.5 + 'px';
+			rocket.style.left = value * -0.6 + 'px';
+
+			text.style.marginRight = value * 1.35 + 'px';
+
+		})
+	</script>
+
+</body>
+</html>
