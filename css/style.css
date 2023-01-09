@@ -153,6 +153,12 @@ section img#rock {
 
 }
 
+.secs #rush
+{
+	width: 100%;
+	height: 100%;
+}
+
 .leads
 {
 	display:  flex;
