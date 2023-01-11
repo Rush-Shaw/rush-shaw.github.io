@@ -155,8 +155,8 @@ section img#rock {
 
 .secs #rush
 {
-	width: 100%;
-	height: 100%;
+	width: 45%;
+	height: 45%;
 	object-fit: scale-down;
 }
 
