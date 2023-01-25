@@ -112,7 +112,9 @@ section img#rock {
 #text
 {
 	right: -820px;
-	bottom: 30px;
+	bottom: -150px;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 }
 
 #text
@@ -138,6 +140,8 @@ section img#rock {
 	margin-bottom: 10px;
 	color: #fff;
 	padding-left: 475px;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 }
 .sec p
 {
@@ -150,8 +154,16 @@ section img#rock {
 {
 	display:  flex;
 	flex-direction: row;
-	width: 100%;
-  	height: 100%;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	object-fit: scale-down;
+
+}
+
+.secs p
+{
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 
 }
 
