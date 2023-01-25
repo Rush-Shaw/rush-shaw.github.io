@@ -65,6 +65,8 @@
 		let moon = document.getElementById('moon');
 		let text = document.getElementById('text');
 		let rocket = document.getElementById('rock');
+		var textRect = text.getBoundingClientRect();
+		var bodyRect = document.body.getBoundingClientRect();
 		const scaler = 1/25
 		window.addEventListener('scroll', function(){
 			let value = window.scrollY;
@@ -74,12 +76,12 @@
 			
 			rocket.style.top = value * -0.5*scaler + 'vw';
 			rocket.style.left = value * -0.6*scaler + 'vw';
-			if (value * 3*scaler < 62){
+			if ((textRect.left+textRect.right)/2 > (bodyRect.left+bodyRect.right)/2) /*when text is right of center*/{
 				text.style.marginRight = value * 3*scaler+ 'vw';
 			}
-			else {
-				text.style.marginRight = 62 + 'vw'
-			}
+			// else {
+			// 	text.style.marginRight = 62 + 'vw'
+			// }
 
 
 		})
