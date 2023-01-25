@@ -150,11 +150,20 @@ section img#rock {
 {
 	display:  flex;
 	flex-direction: row;
-	object-fit: scale-down;
 
 }
 
+.secs p{
+	object-fit: cover;
+	height: 100%;
+	width: auto;
+}
 
+#rush {
+	object-fit: cover;
+	height: 100%;
+	width: auto;
+}
 
 .leads
 {
