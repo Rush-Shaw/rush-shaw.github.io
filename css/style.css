@@ -125,44 +125,10 @@ section img#rock {
 
 }
 
-.sec
-{
-	position: relative;
-	padding: 100px;
-	background: #1c0522;
-	padding-left: 350px;
-}
-.sec h2
-{
-	font-size: 3.5em;
-	margin-bottom: 10px;
-	color: #fff;
-	padding-left: 475px;
-}
-.sec p
-{
-	font-size: 1.25em;
-	color: #fff;
-	margin: 50px;
-}
-
-.secs
-{
-	display:  flex;
-	flex-direction: row;
-
-}
-
-.secs p{
-	object-fit: cover;
-	height: 100%;
-	width: auto;
-}
-
 #rush {
-	object-fit: cover;
-	height: 100%;
-	width: auto;
+	border: 10px solid white;
+	border-radius: 50px;
+	max-width: 20vw;
 }
 
 .leads
@@ -170,6 +136,62 @@ section img#rock {
 	display:  flex;
 	flex-direction: column;
 	padding-top: 30px;
+	justify-content: left;
+	
+} 
+
+
+
+
+.about_container
+{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr; 
+	background: linear-gradient(#2b1055, #7597de);
+
+	width: 100vw;
 	
 }
+.about {
+	grid-row: 1;
+	grid-column: 2;
+	font-size: 3.5em;
+	margin-bottom: 10px;
+	color: #fff;
+	margin: auto;
+	
+}
+.obj1 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row: 2;
+	max-width: 1fr;
+	display: flex;
+	justify-content: right;
 
+}
+.obj2 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row: 2;
+	max-width: 1fr;
+
+}
+.about-para{
+	font-size:1.25em;
+	color: #fff;
+	margin: 50px;
+	text-align: center;
+}
+.obj3 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row: 2;
+	max-width: 1fr;
+
+}
+.imageContainer {
+	width: fit-content;
+	height: fit-content;
+	padding: 5%;
+}

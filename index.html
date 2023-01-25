@@ -14,7 +14,7 @@
 
 			<ul>
 				<li><a href="#logo" class="active">Home</a></li>
-				<li><a href="#sec">About</a></li>
+				<li><a href="#about_container">About</a></li>
 			</ul>
 	</header>
 
@@ -27,17 +27,18 @@
 	</section>
 
 
-	<div class = "sec" id="sec">
-		<h2>About Me</h2>
+	<div class="about_container">
+		<div class="about">About Me</div>
+		<div class="obj1">
+			<div class="imageContainer">
+				<img src="RushPort.jpg" id = "rush">
+			</div>
+		</div>
+		<div class="obj2">
+			<p class="about-para">"Hello there! My name is Rushit Shah and I am a First Year Student<br> at Mcmaster University. Currently I am working towards obtaining a<br> Bachelors of Applied Sciences (BASc) in Computer Science.<br> <br>In my free time I love to code projects, play the tablas, sing Bollywood<br> songs, and persue photography. In addition to these hobbies, I also<br> LOVE to eat. I will not back down to try any new food fad there is!<br> <br>Well that is all I've to say about me! Feel free to click on any of the<br> icons beside as they will lead you to my resume, my github, my<br> LinkedIn or my photography page.</p>
 
-		<div class = "secs" id = "secs">
-
-			<img src="RushPort.jpg" id = "rush">
-
-			<p>"Hello there! My name is Rushit Shah and I am a First Year Student<br> at Mcmaster University. Currently I am working towards obtaining a<br> Bachelors of Applied Sciences (BASc) in Computer Science.<br> <br>In my free time I love to code projects, play the tablas, sing Bollywood<br> songs, and persue photography. In addition to these hobbies, I also<br> LOVE to eat. I will not back down to try any new food fad there is!<br> <br>Well that is all I've to say about me! Feel free to click on any of the<br> icons beside as they will lead you to my resume, my github, my<br> LinkedIn or my photography page.</p>
-
-
-
+		</div>
+		<div class="obj3">
 			<div class = "leads" id = "leads">
 				<a href="https://drive.google.com/file/d/1HIuhj3N5qGA2bNEAMW8UOPUsn7PtuRCr/view?usp=sharing">
 					<img src="resume.svg" id = "res" width="80px" height="80px">
@@ -56,7 +57,6 @@
 				</a>
 
 			</div>
-
 		</div>
 
 	</div>
@@ -65,17 +65,22 @@
 		let moon = document.getElementById('moon');
 		let text = document.getElementById('text');
 		let rocket = document.getElementById('rock');
-
+		const scaler = 1/25
 		window.addEventListener('scroll', function(){
 			let value = window.scrollY;
-			moon.style.top = value * 0.5 + 'px';
-			moon.style.left = value * -0.42 + 'px';
+			moon.style.top = value * 0.5*scaler + 'vw';
+			moon.style.left = value * -0.42*scaler + 'vw';
 
 			
-			rocket.style.top = value * -0.5 + 'px';
-			rocket.style.left = value * -0.6 + 'px';
+			rocket.style.top = value * -0.5*scaler + 'vw';
+			rocket.style.left = value * -0.6*scaler + 'vw';
+			if (value * 3*scaler < 62){
+				text.style.marginRight = value * 3*scaler+ 'vw';
+			}
+			else {
+				text.style.marginRight = 62 + 'vw'
+			}
 
-			text.style.marginRight = value * 1.35 + 'px';
 
 		})
 	</script>
