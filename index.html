@@ -22,10 +22,9 @@
 		<img src="parallax.png" id="parallax">
 		<img src="moon.png" id = "moon">
 		<img src="rocket.png" id = "rock" >
-		<h2 id="text">Hello I'm Rushit Shah!</h2>
+		<div><h2 id="text">Hello I'm Rushit Shah!</h2></div>
 
 	</section>
-
 
 	<div class="about_container">
 		<div class="about">About Me</div>
@@ -69,7 +68,6 @@
 		var bodyRect = document.body.getBoundingClientRect();
 		var w = window.innerWidth;
 		const scaler = 1/25
-		var val = 0
 		window.addEventListener('scroll', function(){
 			let value = window.scrollY;
 			moon.style.top = value * 0.5*scaler + 'vw';
@@ -78,7 +76,8 @@
 			
 			rocket.style.top = value * -0.5*scaler + 'vw';
 			rocket.style.left = value * -0.6*scaler + 'vw';
-			if (value < w/2.65) /*when text is right of center*/{
+			
+			if (value < (textRect.right + textRect.left)/6.2) /*when text is right of center*/{
 				text.style.marginRight = value * 3*scaler+ 'vw';
 			}
 			// else {

@@ -111,18 +111,14 @@ section img#rock {
 
 #text
 {
-	right: -820px;
-	bottom: 30px;
-}
-
-#text
-{
 	position: absolute;
 	color: #fff;
 	white-space: nowrap;
 	font-size: 7.5vw;
 	z-index: 9;
-
+	right: -820px;
+	bottom: 30px;
+	text-align: center;
 }
 
 #rush {
