@@ -67,16 +67,18 @@
 		let rocket = document.getElementById('rock');
 		var textRect = text.getBoundingClientRect();
 		var bodyRect = document.body.getBoundingClientRect();
+		var w = window.innerWidth;
 		const scaler = 1/25
+		var val = 0
 		window.addEventListener('scroll', function(){
 			let value = window.scrollY;
 			moon.style.top = value * 0.5*scaler + 'vw';
 			moon.style.left = value * -0.42*scaler + 'vw';
-
+			val = value
 			
 			rocket.style.top = value * -0.5*scaler + 'vw';
 			rocket.style.left = value * -0.6*scaler + 'vw';
-			if ((textRect.left+textRect.right)/2 > (bodyRect.left+bodyRect.right)/2) /*when text is right of center*/{
+			if (value < w/2.65) /*when text is right of center*/{
 				text.style.marginRight = value * 3*scaler+ 'vw';
 			}
 			// else {
