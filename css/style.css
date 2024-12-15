@@ -67,7 +67,6 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* The gradient background is already on body, so no need for an overlay here */
 }
 
 /* Optional if you had a before pseudo-element, remove or comment out
@@ -111,7 +110,8 @@ section img#rock {
     position: absolute;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%, -50%);
+    /* Start off-screen to the right: */
+    transform: translate(-50%, -50%) translateX(100vw);
     color: #fff;
     white-space: nowrap;
     font-size: 7.5vw;
