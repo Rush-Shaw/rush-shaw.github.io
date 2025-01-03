@@ -184,3 +184,10 @@ section img#rock {
     height: fit-content;
     padding: 5%;
 }
+
+newsite {
+    font-size:1.05em;
+    color: #fff;
+    margin: 50px;
+    text-align: center;
+}
