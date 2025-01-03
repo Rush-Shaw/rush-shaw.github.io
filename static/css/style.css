@@ -1,0 +1,137 @@
+body {
+    font-family: "PT Mono", Arial;
+    margin: 0;
+    padding-top: 30px;
+    background-color: #fff5e0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+header {
+    padding: 20px;
+    text-align: left; /* Ensures text inside stays left-aligned */
+    max-width: 675px; /* Limits the width of the content */
+    width: 90%; /* Allows it to be responsive */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4E3524;
+    padding-bottom: 30px;
+    border-bottom: 5px dashed #4E3524; /* Adds a dotted line */
+    padding-bottom: 10px; /* Adds spacing below the dotted line */
+    margin-bottom: 20px; /* Adds space between the line and the paragraphs */
+}
+
+header p {
+    margin: 10px 0;
+    color: #4E3524;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #4E3524;
+    padding-bottom: 30px;
+    margin-top: 35px;
+    border-bottom: 5px dashed #4E3524; /* Adds a dotted line */
+    padding-bottom: 10px; /* Adds spacing below the dotted line */
+    margin-bottom: 20px; /* Adds space between the line and the paragraphs */
+}
+
+header ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 20px 0;
+}
+
+header ul li {
+    font-size: 1.2em;
+    color: #4E3524;
+    margin: 5px 0;
+    padding-left: 20px; /* Adds space for the custom bullet */
+    position: relative; /* Required for the custom bullet */
+}
+
+header ul li::before {
+    content: "*"; /* Adds a custom bullet point */
+    font-weight: bold; /* Makes the bullet bold */
+    color: #4E3524; /* Matches the text color */
+    position: absolute; /* Position it relative to the li */
+    left: 0; /* Aligns it to the left */
+}
+
+header ul li a {
+    color: #4E3524;
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+header ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    font-weight: bold; /* Bolds the text on hover */
+}
+
+.resume-link {
+    text-decoration: underline; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    color: #4E3524; /* Optional: Match the text color */
+}
+
+.resume-link .no-underline {
+    text-decoration: none; /* Prevents underline for the icon */
+}
+
+.resume-link:hover {
+    font-weight: bold; /* Bolds the text on hover */
+}
+
+.footer {
+    color: #4E3524; /* Example color */
+    font-weight: bold; /* Bolds the text on hover */
+    text-align: center; /* Center align text */
+    margin-top: 50px; /* Add spacing above */
+    padding-bottom: 30px; /* Add padding to ensure spacing below */
+}
+
+.floating-astronaut {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: url('/static/astronaut.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.7;
+    transform-origin: center center;
+    animation: float 90s infinite cubic-bezier(0.42, 0, 0.58, 1);
+    pointer-events: none;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20% {
+      transform: translate(calc(-50% + 400px), calc(-50% - 300px)) rotate(180deg);
+    }
+    40% {
+      transform: translate(calc(-50% - 300px), calc(-50% + 200px)) rotate(360deg);
+    }
+    60% {
+      transform: translate(calc(-50% + 200px), calc(-50% + 300px)) rotate(540deg);
+    }
+    80% {
+      transform: translate(calc(-50% - 400px), calc(-50% - 200px)) rotate(720deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(1080deg);
+    }
+  }
